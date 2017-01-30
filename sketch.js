@@ -1,10 +1,13 @@
+var button;
+var bgcolor;
 function setup(){
-  createCanvas(1000, 1000, WEBGL);
+  createCanvas(200, 200);
+  var button = createButton("Random Color");
+  button.mousePressed(changeColor);
 }
-
+function changeColor(){
+  bgcolor = random(40,50,60);
+}
 function draw(){
-  background(200);
-  rotateX(frameCount * 0.01);
-  rotateY(frameCount * 0.01);
-  box(200, 200, 200);
+  background(bgcolor);
 }
