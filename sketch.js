@@ -7,7 +7,7 @@ function setup(){
   button.mousePressed(changeColor);
 }
 function changeColor(){
-  bgcolor = color(random(30));
+  bgcolor = color(random(255,255,255));
 }
 function draw(){
   background(bgcolor);
