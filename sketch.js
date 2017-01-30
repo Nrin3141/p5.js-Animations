@@ -6,8 +6,12 @@ function setup(){
   button = createButton("Click me");
   button.mousePressed(changeColor);
 }
+
 function changeColor(){
-  bgcolor = color(random(255,255,255));
+  var red = random(0, 255);
+  var green = random(0, 255);
+  var blue = random(0, 255);
+  bgcolor = color(red, green, blue);
 }
 function draw(){
   background(bgcolor);
