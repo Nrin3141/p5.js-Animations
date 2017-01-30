@@ -1,18 +1,23 @@
 var button;
 var bgcolor;
 function setup(){
-  canvas = createCanvas(200, 200);
+  button = createButton("Delete");
+  canvas = createCanvas(800, 800);
   bgcolor = color(200);
-  button = createButton("Click me");
-  button.mousePressed(changeColor);
+
+  button.mousePressed(refresh);
 }
 
-function changeColor(){
-  var red = random(0, 255);
-  var green = random(0, 255);
-  var blue = random(0, 255);
-  bgcolor = color(red, green, blue);
+function refresh(){
+  noCanvas();
+  canvas = createCanvas(800, 800);
+  ;
 }
 function draw(){
-  background(bgcolor);
+  var red = 0;
+  var green = random(100, 255);
+  var blue = random(100, 255);
+  fill (red, green, blue);
+  ellipse(mouseX, mouseY, 50, 50);
 }
+noCursor();
