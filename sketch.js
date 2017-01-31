@@ -20,11 +20,13 @@ function refresh(){
 }
 function draw(){
   cursor(ARROW);
-  if (mouseIsPressed) {
-    var green = random(100, 255);
-    var blue = random(100, 255);
-    fill (0, green, blue);
-    ellipse(mouseX, mouseY, 50, 50);
-  }
+  var moveXaxis = random(0,1600);
+  var moveYaxis = random(0, 750);
+  var green = random(0, 255);
+  var blue = random(0, 255);
+  var red = random(0,255);
+  fill (red, green, blue);
+  ellipse(moveXaxis,moveYaxis, 50, 50);
+
 
 }
