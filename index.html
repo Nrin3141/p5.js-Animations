@@ -8,9 +8,33 @@
   <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
   <script language="javascript" type="text/javascript" src="sketch.js"></script>
   <!-- this line removes any default padding and style. you might only need one of these values set. -->
-  <style> body {padding: 0; margin: 0;} </style>
-</head>
+  <style>
+  body {
+    background-color: #0099ff;
+    color:rgb(242,242,242);
+  }
+    .center {
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      margin-top: 5px;
+    }
+    div {
+      margin-top: 15px;
+    }
 
+
+  </style>
+</head>
 <body>
+  <div class="container center">
+    <h1> Painting Programm </h1>
+      <div id="canvas-position">
+      </div>
+      <div id="button-position">
+      </div>
+        <p> Hold left to paint circles :) </p>
+  </div>
 </body>
 </html>

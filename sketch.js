@@ -1,23 +1,32 @@
 var button;
 var bgcolor;
+
 function setup(){
   button = createButton("Delete");
-  canvas = createCanvas(800, 800);
-  bgcolor = color(200);
+  button.parent('button-position');
+  var canvas = createCanvas(1600, 750);
+  bgcolor = color((242,242,242));
+  background(bgcolor);
+  canvas.parent('canvas-position');
+
 
   button.mousePressed(refresh);
 }
 
 function refresh(){
   noCanvas();
-  canvas = createCanvas(800, 800);
+  canvas = createCanvas(1600, 750);
+  canvas.parent('canvas-position');
+  background(bgcolor);
   ;
 }
 function draw(){
-  var red = 0;
-  var green = random(100, 255);
-  var blue = random(100, 255);
-  fill (red, green, blue);
-  ellipse(mouseX, mouseY, 50, 50);
+  cursor(ARROW);
+  if (mouseIsPressed) {
+    var green = random(100, 255);
+    var blue = random(100, 255);
+    fill (0, green, blue);
+    ellipse(mouseX, mouseY, 50, 50);
+  }
+
 }
-noCursor();
