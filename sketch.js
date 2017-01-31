@@ -25,8 +25,9 @@ function draw(){
   var green = random(0, 255);
   var blue = random(0, 255);
   var red = random(0,255);
+  var size = random(20, 100)
   fill (red, green, blue);
-  ellipse(moveXaxis,moveYaxis, 50, 50);
+  ellipse(moveXaxis,moveYaxis, size, size);
 
 
 }
