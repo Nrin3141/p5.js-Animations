@@ -8,8 +8,6 @@ function setup(){
   bgcolor = color((242,242,242));
   background(bgcolor);
   canvas.parent('canvas-position');
-
-
   button.mousePressed(refresh);
 }
 
